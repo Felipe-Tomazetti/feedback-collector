@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -6,6 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Hi There</h1>
+        <a href="/auth/google"> Sign in with Google </a>
       </header>
     </div>
   );
