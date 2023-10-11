@@ -27,6 +27,6 @@ authRoutes(app);
 //another way of doing the same thinks as the line above
 //require('./routes/authRoutes')app();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 
 app.listen(PORT);
