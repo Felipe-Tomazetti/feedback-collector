@@ -1,10 +1,9 @@
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
-
-  console.log(props)
   const renderContent = () => {
-    switch(props.atuh) {
+    switch(props.auth) {
       case null:
         return;
       case false:
@@ -13,14 +12,14 @@ const Header = (props) => {
         );
       default:
         return (
-          <li><a href="#"> Logout </a></li>
+          <li><a href="/api/logout"> Logout </a></li>
         );
     }
   }
   return (
     <nav>
       <div className="nav-wrapper blue">
-        <a href="#" className="left brand-logo">Emaily</a>
+        <Link to={props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
 
         <ul id="nav-mobile" className="right">
           {renderContent()}
