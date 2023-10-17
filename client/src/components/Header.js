@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Payment from "./Payments";
 
 const Header = (props) => {
   const renderContent = () => {
@@ -11,9 +12,10 @@ const Header = (props) => {
           <li><a href="/auth/google">Log in with Google</a></li>
         );
       default:
-        return (
-          <li><a href="/api/logout"> Logout </a></li>
-        );
+        return [
+          <li key={1}><Payment/></li>,
+          <li key={2}><a href="/api/logout"> Logout </a></li>
+        ];
     }
   }
   return (
